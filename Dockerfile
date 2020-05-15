@@ -1,4 +1,4 @@
-FROM php:7.4.5-fpm-alpine
+FROM php:7.4.6-fpm-alpine
 
 RUN apk update \
     && apk add --virtual .build-tools --no-cache autoconf gcc g++ make \
