@@ -8,4 +8,6 @@ RUN apk update \
     && docker-php-ext-install exif mysqli pdo_mysql zip bcmath \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
-    && apk del .build-tools
+    && apk del .build-tools \
+    && curl -sS https://getcomposer.org/installer | php \
+    && mv composer.phar /usr/local/bin/composer
